@@ -640,6 +640,140 @@
     Reclamar
   </a>
 </div>
+<!-- descrição de pagamento -->
+
+ <style>
+  .footer {
+  background: #f5f5f5;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.footer-column h3 {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+  text-decoration: none;
+  font-size: 13px;
+  color: #555;
+  transition: 0.3s;
+}
+
+.footer-column ul li a:hover {
+  color: #ee4d2d;
+}
+
+/* PAGAMENTOS */
+.payments {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.payments img {
+  width: 100%;
+  max-width: 70px;
+  background: #fff;
+  padding: 5px;
+  border-radius: 4px;
+  object-fit: contain;
+}
+
+/* DESKTOP */
+@media (min-width: 768px) {
+  .footer-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .footer-column {
+    width: 22%;
+  }
+}
+ </style>
+  <footer class="footer">
+  <div class="footer-container">
+
+    <!-- ATENDIMENTO -->
+    <div class="footer-column">
+      <h3>ATENDIMENTO AO CLIENTE</h3>
+      <ul>
+        <li><a href="#">Central de Ajuda</a></li>
+        <li><a href="#">Como Comprar</a></li>
+        <li><a href="#">Métodos de Pagamento</a></li>
+        <li><a href="#">Garantia Shopee</a></li>
+        <li><a href="#">Devolução e Reembolso</a></li>
+        <li><a href="#">Fale Conosco</a></li>
+        <li><a href="#">Ouvidoria</a></li>
+        <li><a href="#">Preferências de cookies</a></li>
+      </ul>
+    </div>
+
+    <!-- SOBRE -->
+    <div class="footer-column">
+      <h3>SOBRE A SHOPEE</h3>
+      <ul>
+        <li><a href="#">Sobre Nós</a></li>
+        <li><a href="#">Políticas</a></li>
+        <li><a href="#">Política de Privacidade da Shopee</a></li>
+        <li><a href="#">Programa de Afiliados</a></li>
+        <li><a href="#">Seja um Motorista Parceiro</a></li>
+        <li><a href="#">Ofertas Relâmpago</a></li>
+        <li><a href="#">Shopee Blog</a></li>
+        <li><a href="#">Imprensa</a></li>
+      </ul>
+    </div>
+
+    <!-- PAGAMENTO -->
+    <div class="footer-column">
+      <h3>PAGAMENTO</h3>
+      <div class="payments">
+        <img src="visa.webp" alt="Visa">
+        <img src="master.webp" alt="Mastercard">
+        <img src="elo.webp" alt="Elo">
+        <img src="americaex.png" alt="American Express">
+        <img src="boleto.png" alt="Boleto">
+        <img src="pix.png" alt="Pix">
+      </div>
+    </div>
+
+    <!-- REDES -->
+    <div class="footer-column">
+      <h3>SIGA-NOS</h3>
+      <ul>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">TikTok</a></li>
+        <li><a href="#">WhatsApp</a></li>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">LinkedIn</a></li>
+      </ul>
+    </div>
+
+  </div>
+</footer>
+
+
+  
 
 
   <!-- BOTÃO FIXO - CORRIGIDO PARA NÃO SAIR DA TELA -->
@@ -703,3 +837,4 @@
 </body>
 
 </html>
+
