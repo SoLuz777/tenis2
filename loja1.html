@@ -390,6 +390,84 @@
           <h2 style="margin:0 0 4px 0;font:700 16px/1.2 system-ui">Tênis Carbon arathon Chunta</h2>
           <h3 style="margin:0 0 4px 0;font:600 15px/1.2 system-ui;color:#6b7280"></h3>
           <h3 style="margin:0 0 12px 0;font:600 15px/1.2 system-ui;color:#6b7280">Familía</h3>
+
+
+           <div class="divider"></div>
+<div class="seletor-tamanho">
+  <h3 class="titulo-tamanho">Escolha o Tamanho</h3>
+
+  <div class="tamanhos">
+    <button type="button" class="tamanho-btn">37</button>
+    <button type="button" class="tamanho-btn">38</button>
+    <button type="button" class="tamanho-btn">39</button>
+    <button type="button" class="tamanho-btn">40</button>
+    <button type="button" class="tamanho-btn">41</button>
+    <button type="button" class="tamanho-btn">42</button>
+  </div>
+
+  <input type="hidden" id="tamanhoSelecionado" name="tamanho">
+</div>
+
+<style>
+.seletor-tamanho {
+  width: 100%;
+  max-width: 400px;
+}
+
+.titulo-tamanho {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.tamanhos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tamanho-btn {
+  flex: 1 0 22%;
+  min-width: 60px;
+  height: 45px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  background: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.tamanho-btn.ativo {
+  background: #000;
+  color: #fff;
+  border-color: #000;
+}
+
+@media (max-width: 480px) {
+  .tamanho-btn {
+    height: 50px;
+    font-size: 18px;
+  }
+}
+</style>
+
+<script>
+(function(){
+  const container = document.querySelector('.seletor-tamanho');
+  const botoes = container.querySelectorAll('.tamanho-btn');
+  const inputHidden = container.querySelector('#tamanhoSelecionado');
+
+  botoes.forEach(botao => {
+    botao.addEventListener('click', function() {
+      botoes.forEach(btn => btn.classList.remove('ativo'));
+      this.classList.add('ativo');
+      inputHidden.value = this.textContent;
+    });
+  });
+})();
+</script>
+  <div class="divider"></div>
           
           <div class="row" style="color:#4b5563;font-weight:700">
             <span class="rating">
@@ -877,6 +955,7 @@
 </body>
 
 </html>
+
 
 
 
